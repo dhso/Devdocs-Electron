@@ -1,0 +1,55 @@
+{
+  "name": "Devdocs",
+  "version": "0.0.1",
+  "author": "hao dong <dhso@163.com>",
+  "description": "devdocs electron client",
+  "license": "MIT",
+  "homepage": "http:/devdocs.io",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron main.dev.js",
+    "build": "electron-builder",
+    "build:dir": "electron-builder --dir",
+    "build:mac": "electron-builder --mac --x64",
+    "build:linux": "electron-builder --dir --linux --x64",
+    "build:win": "electron-builder --dir --win --x64"
+  },
+  "build": {
+    "productName": "Devdocs",
+    "appId": "com.minws.devdocs",
+    "directories": {
+      "output": "build"
+    },
+    "dmg": {
+      "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }]
+    },
+    "mac": {
+      "icon": "icons/icon.icns"
+    },
+    "win": {
+      "icon": "icons/icon.ico"
+    },
+    "linux": {
+      "icon": "icons"
+    }
+  },
+  "dependencies": {
+    "electron-store": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.4",
+    "electron-debug": "^2.0.0"
+  }
+}
