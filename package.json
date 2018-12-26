@@ -9,10 +9,13 @@
   "scripts": {
     "dev": "electron main.dev.js",
     "build": "electron-builder",
-    "build:dir": "electron-builder --dir",
     "build:mac": "electron-builder --mac --x64",
-    "build:linux": "electron-builder --dir --linux --x64",
-    "build:win": "electron-builder --dir --win --x64"
+    "build:linux": "electron-builder --linux --x64",
+    "build:win": "electron-builder --win --x64",
+    "build:dir": "electron-builder --dir",
+    "build:dir:mac": "electron-builder --dir --mac --x64",
+    "build:dir:linux": "electron-builder --dir --linux --x64",
+    "build:dir:win": "electron-builder --dir --win --x64"
   },
   "build": {
     "productName": "Devdocs",
