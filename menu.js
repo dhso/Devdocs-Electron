@@ -16,13 +16,17 @@ const settingsItems = [
     focusedWindow.setAutoHideMenuBar(menuItem.checked)
     focusedWindow.setMenuBarVisibility(!menuItem.checked)
   }
-},
-{
+}, {
   label: 'Preferences…',
-  enabled: false,
   accelerator: 'Cmd+,',
   click(menuItem, focusedWindow) {
     sendAction(focusedWindow, 'show:preferences')
+  }
+}, {
+  label: 'Offine Data',
+  accelerator: 'Cmd+.',
+  click(menuItem, focusedWindow) {
+    sendAction(focusedWindow, 'show:offine')
   }
 }]
 
